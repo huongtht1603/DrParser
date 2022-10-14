@@ -50,7 +50,7 @@ public class navigationmenu extends AbstractPage {
 	@FindBy(xpath="//a[normalize-space()='products']")
 	public WebElement productsNav;
 	
-	@FindBy(xpath="//a[normalize-space()='Dr Parser']")
+	@FindBy(xpath="//a[normalize-space()='DrParser']")
 	public WebElement drParserNav;
 	
 	@FindBy(xpath="//*[@id='gatsby-focus-wrapper']/main/section[2]/div/div/div/button[2]")
@@ -73,6 +73,11 @@ public class navigationmenu extends AbstractPage {
 	
 	@FindBy(xpath="//*[@id='gatsby-focus-wrapper']/main/section/section[4]/div/div/div[2]/div[2]/div/div/p")
 	public WebElement dataScienceLnk;
+	
+	@FindBy(xpath="//*[@id='gatsby-focus-wrapper']/main/div/section/div/div/a/div/div")
+	public WebElement openPositionsBtn;
+	
+	
 	
 	public String artiIntePage_title = "Artificial Intelligence";
 	public String businessIntePage_title = "Business Intelligence";
@@ -268,4 +273,13 @@ public class navigationmenu extends AbstractPage {
 		Actions act= new Actions(driver);
 	    act.moveToElement(dataScienceLnk).click().build().perform();
 	}	
+	
+	public void clickOpenPositionsBtn() {
+		waitHelper.WaitForElement(this.openPositionsBtn, 3);
+		Actions act= new Actions(driver);
+	    act.moveToElement(openPositionsBtn).click().build().perform();
+	}
+	
+	
+	
 }

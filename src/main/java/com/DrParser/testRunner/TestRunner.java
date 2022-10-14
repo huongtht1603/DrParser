@@ -4,9 +4,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-//import io.cucumber.junit.CucumberOptions;
 import cucumber.api.CucumberOptions;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
@@ -19,7 +17,10 @@ import cucumber.api.testng.TestNGCucumberRunner;
 		"src/test/resources/features/navigation/navigation.feature",
 		"src/test/resources/features/navigation/pagination.feature",
 		"src/test/resources/features/Demo DrParser/demoParser.feature",
-		"src/test/resources/features/Blog/searchFunction.feature"
+		"src/test/resources/features/Blog/searchFunction.feature",
+		"src/test/resources/features/subcribe/subcribe.feature",
+		"src/test/resources/features/Blog/navigationBlog.feature",
+		"src/test/resources/features/Careers/Position.feature"
 			}  , 
 		glue = { "com/DrParser/stepdefinitions" }, 
 		plugin = {"pretty",

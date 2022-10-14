@@ -71,7 +71,7 @@ public class contactUsNowStepDefinitions extends TestBase  {
 
 	@Given("^Being on the blog page$")
 	public void being_on_the_blog_page() throws Throwable {
-		driver.navigate().to(Constants.base_URL);
+		driver.navigate().to(Constants.blog_URL);
 		Navigation.clickblogNav();
 		
 	}

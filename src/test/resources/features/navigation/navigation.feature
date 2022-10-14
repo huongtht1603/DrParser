@@ -71,4 +71,11 @@ Feature: As a user I can be redirected to expected page when clicking on navigat
 	    Then Being on Contact page
 	
 
+		Scenario: TC_124 Verify user can access to open positions page when clicking on "Open positions" button
+			Given Being on the page
+	  	When Click on Careers navigation
+	    And Click on Our benefits button
+	    And Click on Open Positions button
+	    Then Being on the careers page
+	    
 	

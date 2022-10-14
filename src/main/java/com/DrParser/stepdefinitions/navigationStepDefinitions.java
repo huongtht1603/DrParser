@@ -149,5 +149,16 @@ public class navigationStepDefinitions extends TestBase {
 	public void click_Data_Science_and_Analytics_Solutions_link_on_services_section() throws Throwable {
 		Navigation.clickdataScienceLnk();
 	}
+	
+	@When("^Click on Our benefits button$")
+	public void click_on_Our_benefits_button() throws Throwable {
+	   Navigation.clickOurBenefitsBtn();
+	}
+
+	@When("^Click on Open Positions button$")
+	public void click_on_Open_Positions_button() throws Throwable {
+	   Navigation.clickOpenPositionsBtn();
+	}
+	
 
 }

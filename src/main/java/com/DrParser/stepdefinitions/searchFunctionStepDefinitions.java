@@ -29,6 +29,7 @@ public class searchFunctionStepDefinitions extends TestBase {
 
 	@Then("^Being on the Blog page$")
 	public void being_on_the_Blog_page() throws Throwable {
+		driver.navigate().to(Constants.blog_URL);
 		Navigation.clickblogNav();
 	}
 	
