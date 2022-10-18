@@ -89,6 +89,8 @@ public class navigationmenu extends AbstractPage {
 	public String careersPage_title = "Careers";
 	public String DrParser_title = "CV Parsing";
 	public String contactPage_title = "Contact";
+	public String Benefits_title = "Benefits";
+	public String Pricing_title = "CV Parsing";
 	
 	
 	
@@ -279,6 +281,23 @@ public class navigationmenu extends AbstractPage {
 		Actions act= new Actions(driver);
 	    act.moveToElement(openPositionsBtn).click().build().perform();
 	}
+	
+	public void isBeingBenefitsPage() throws InterruptedException {
+		Thread.sleep(2000);
+	    String actTitle= driver.getTitle();
+	    assertTrue(actTitle.contains(Benefits_title));
+	    assertTrue(banner.isDisplayed());
+	}
+	
+	public void isBeingPricingPage() throws InterruptedException {
+		Thread.sleep(2000);
+	    String actTitle= driver.getTitle();
+	    System.out.println(actTitle);
+	    assertTrue(actTitle.contains(Pricing_title));
+	    assertTrue(banner.isDisplayed());
+	}
+	
+	
 	
 	
 	

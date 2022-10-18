@@ -135,47 +135,52 @@ public class subcribe extends AbstractPage{
 	public String invalid_email3 = "huongtht1603@gmail..com";
 	public String invalid_email4 = "huongtht1603@gmail.com.";
 	
-	public void enterEmail() throws AWTException {
+	public void enterEmail() throws AWTException, InterruptedException {
 		waitHelper.WaitForElement(this.emailField, 4);
 		pressTabKey();
 		pressTabKey();
 		pressTabKey();
+		Thread.sleep(1000);
 		setClipBoard(invalid_email0);
 		paste();
 	}
 	
-	public void enterEmail1() throws AWTException {
+	public void enterEmail1() throws AWTException, InterruptedException {
 		waitHelper.WaitForElement(this.emailField, 4);
 		pressTabKey();
 		pressTabKey();
 		pressTabKey();
+		Thread.sleep(1000);
 		setClipBoard(invalid_email1);
 		paste();
 	}
 	
-	public void enterEmail2() throws AWTException {
+	public void enterEmail2() throws AWTException, InterruptedException {
 		waitHelper.WaitForElement(this.emailField, 4);
 		pressTabKey();
 		pressTabKey();
 		pressTabKey();
+		Thread.sleep(1000);
 		setClipBoard(invalid_email2);
 		paste();
 	}
 	
-	public void enterEmail3() throws AWTException {
+	public void enterEmail3() throws AWTException, InterruptedException {
 		waitHelper.WaitForElement(this.emailField, 4);
 		pressTabKey();
 		pressTabKey();
 		pressTabKey();
+		Thread.sleep(1000);
 		setClipBoard(invalid_email3);
 		paste();
 	}
 	
-	public void enterEmail4() throws AWTException {
+	public void enterEmail4() throws AWTException, InterruptedException {
 		waitHelper.WaitForElement(this.emailField, 4);
 		pressTabKey();
 		pressTabKey();
 		pressTabKey();
+		Thread.sleep(1000);
 		setClipBoard(invalid_email4);
 		paste();
 	}
@@ -184,32 +189,35 @@ public class subcribe extends AbstractPage{
 	public String invalid_phoneNo1 = "+849842228602352652";
 	public String invalid_phoneNo2 = "abc%%^^&&";
 	
-	public void enterPhoneNumber() throws AWTException {
+	public void enterPhoneNumber() throws AWTException, InterruptedException {
 		waitHelper.WaitForElement(this.emailField, 4);
 		pressTabKey();
 		pressTabKey();
 		pressTabKey();
 		pressTabKey();
+		Thread.sleep(1000);
 		setClipBoard(invalid_phoneNo0);
 		paste();
 	}
 	
-	public void enterPhoneNumber1() throws AWTException {
+	public void enterPhoneNumber1() throws AWTException, InterruptedException {
 		waitHelper.WaitForElement(this.emailField, 4);
 		pressTabKey();
 		pressTabKey();
 		pressTabKey();
 		pressTabKey();
+		Thread.sleep(1000);
 		setClipBoard(invalid_phoneNo1);
 		paste();
 	}
 	
-	public void enterPhoneNumber2() throws AWTException {
+	public void enterPhoneNumber2() throws AWTException, InterruptedException {
 		waitHelper.WaitForElement(this.emailField, 4);
 		pressTabKey();
 		pressTabKey();
 		pressTabKey();
 		pressTabKey();
+		Thread.sleep(1000);
 		setClipBoard(invalid_phoneNo2);
 		paste();
 	}
@@ -257,22 +265,26 @@ public class subcribe extends AbstractPage{
 	}
 	
 
-	public String getMsg1() {
+	public String getMsg1() throws InterruptedException {
+		Thread.sleep(2000);
 		String actual_msg1 = msg1.getText();
 		return actual_msg1;
 	}
 	
-	public String getMsg2() {
+	public String getMsg2() throws InterruptedException {
+		Thread.sleep(2000);
 		String actual_msg2 = msg2.getText();
 		return actual_msg2;
 	}
 	
-	public String getMsg3() {
+	public String getMsg3() throws InterruptedException {
+		Thread.sleep(2000);
 		String actual_msg3 = msg3.getText();
 		return actual_msg3;
 	}
 	
-	public String getMsg4() {
+	public String getMsg4() throws InterruptedException {
+		Thread.sleep(2000);
 		String actual_msg4 = msg4.getText();
 		return actual_msg4;
 	}

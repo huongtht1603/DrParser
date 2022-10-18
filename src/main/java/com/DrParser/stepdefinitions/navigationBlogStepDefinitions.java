@@ -77,6 +77,7 @@ public class navigationBlogStepDefinitions extends TestBase {
 	    DA3 = navigationBlog.sumDATopics();
 	    DL3 = navigationBlog.sumDLTopics();
 	    ML3 = navigationBlog.sumMLTopics();
+	    Thread.sleep(2000);
 	    AI_total = AI1 + AI2 + AI3;
 	    DA_total = DA1 + DA2 + DA3;
 	    DL_total = DL1 + DL2 + DL3;
@@ -86,6 +87,7 @@ public class navigationBlogStepDefinitions extends TestBase {
 	@Then("^Click on AI topic tab and compare results$")
 	public void click_on_AI_topic_tab_and_compare_results() throws Throwable {
 	    navigationBlog.clickAITab();
+	    Thread.sleep(2000);
 	    navigationBlog.isRedirectToTopicTabCorrectly();
 	    assertTrue(AI_total == navigationBlog.listInTabSize());	 
 	}
@@ -93,6 +95,7 @@ public class navigationBlogStepDefinitions extends TestBase {
 	@Then("^Click on DA topic tab and compare results$")
 	public void click_on_DA_topic_tab_and_compare_results() throws Throwable {
 	    navigationBlog.clickDATab();
+	    Thread.sleep(2000);
 	    navigationBlog.isRedirectToTopicTabCorrectly();
 	    assertTrue(DA_total == navigationBlog.listInTabSize());	 	
 	}
@@ -100,6 +103,7 @@ public class navigationBlogStepDefinitions extends TestBase {
 	@Then("^Click on DL topic tab and compare results$")
 	public void click_on_DL_topic_tab_and_compare_results() throws Throwable {
 	    navigationBlog.clickDLTab();
+	    Thread.sleep(2000);
 	    navigationBlog.isRedirectToTopicTabCorrectly();
 	    assertTrue(DL_total == navigationBlog.listInTabSize());	 
 	}
@@ -107,6 +111,7 @@ public class navigationBlogStepDefinitions extends TestBase {
 	@Then("^Click on ML topic tab and compare results$")
 	public void click_on_ML_topic_tab_and_compare_results() throws Throwable {
 	    navigationBlog.clickMLTab();
+	    Thread.sleep(2000);
 	    navigationBlog.isRedirectToTopicTabCorrectly();
 	    assertTrue(ML_total == navigationBlog.listInTabSize());	
 	}

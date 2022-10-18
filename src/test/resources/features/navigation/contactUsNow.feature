@@ -61,12 +61,12 @@ Feature: As a user I can be redirected to contact page when clicking on "Contact
 			When Click on Contact us Now button
 	  	Then Being on the Contact page
 
-	 Scenario: TC_125 In Employee benefits page , Verify user is navigated to contact page when clicking on Contact Us Now button
+	 Scenario: TC_126 In Employee benefits page , Verify user is navigated to contact page when clicking on Contact Us Now button
 	  	Given Being on the Employee benefits page
 			When Click on Contact us Now button
 	  	Then Being on the Contact page
 
-	 Scenario: TC_129 In position page , Verify user is navigated to contact page when clicking on Contact Us Now button
+	 Scenario: TC_130 In position page , Verify user is navigated to contact page when clicking on Contact Us Now button
 	  	Given Being on the position page
 			When Click on Contact us Now button
 	  	Then Being on the Contact page

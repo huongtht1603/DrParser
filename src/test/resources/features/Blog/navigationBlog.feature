@@ -85,7 +85,7 @@ Scenario: TC_47c Verify user can access post page if clicking on its name link o
     And navigate to blog page
     When Click on "9" post link and then I redirected to page of respectively post
     
- @Testing 
+@Testing
 Scenario: TC_48 Verify user can access every service section by clicking on service tag
 
 		Given Being on blog page

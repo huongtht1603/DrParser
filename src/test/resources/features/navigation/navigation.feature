@@ -71,11 +71,26 @@ Feature: As a user I can be redirected to expected page when clicking on navigat
 	    Then Being on Contact page
 	
 
-		Scenario: TC_124 Verify user can access to open positions page when clicking on "Open positions" button
+		Scenario: TC_56 Verify user can view benefits of company when clicking on "Our Benefits" button
+			Given Being on the page
+	  	When Click on Careers navigation
+	    And Click on Our benefits button
+	    Then Being Benefits page
+	    
+	  Scenario: TC_64 Verify system can redirect user to price package of DrParser by clicking on "Check out our packages" button
+			Given Being on the page
+			When hover on Products navigation
+	  	And Select DrParser for Services
+	    And Click on Check out our packages button
+	    Then Being price package of DrParser page
+	    
+		Scenario: TC_125 Verify user can access to open positions page when clicking on "Open positions" button
 			Given Being on the page
 	  	When Click on Careers navigation
 	    And Click on Our benefits button
 	    And Click on Open Positions button
 	    Then Being on the careers page
+
+
 	    
 	

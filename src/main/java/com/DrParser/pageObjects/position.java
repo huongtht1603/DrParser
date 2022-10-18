@@ -53,54 +53,37 @@ public class position extends AbstractPage{
 
 	}
 	
-	@SuppressWarnings("unlikely-arg-type")
-	public void compareCapacity () throws InterruptedException {
-		
-		List<positionObj> listOfPosition = new ArrayList<>();
-		
-		for (int i = 0; i < PositionList.size(); i++) {	
-			
-		String positionname = PositionList.get(i).findElement(By.cssSelector("strong:nth-child(1)")).getText(); 					
-
-		WebElement positionnameLnk= driver.findElement(By.cssSelector("strong:nth-child(1)"));
-		
-		String positioNo = PositionList.get(i).findElement(By.cssSelector("span:nth-child(2)")).getText();	
-		int positionNumber = Integer.parseInt(positioNo);	
-						
-		WebElement readMoreBtn= driver.findElement(By.xpath("(//a[@class='custom-btn btn-apply'][contains(.,'READ MORE')])"));
-		
-		positionObj p = new positionObj(positionname, positionnameLnk, positionNumber, readMoreBtn);
-		listOfPosition.add(p);	
+	public void clickPositionAndCompareResult() throws InterruptedException {
+		int size = PositionList.size();
+		for (int i=1; i<size+1; i++) { 
+		String expect_PositionName = driver.findElement(By.xpath("//div[" + i + "]/div/div[1]/div/a/strong")).getText().toLowerCase();
+		String expect_PositionNo = driver.findElement(By.xpath("//div[" + i + "]/div/div[1]/p/span[2]")).getText();	
+		driver.findElement(By.xpath("//div[" + i + "]/div/div[1]/div/a/strong")).click();
+		Thread.sleep(1000);
+		String actual_PositionName = actual_positionName.getText().toLowerCase();
+		String actual_PositionNo = actual_positionNo.getText();
+		assertTrue(actual_PositionName.contains(expect_PositionName));
+		assertTrue(actual_PositionNo.contains(expect_PositionNo));
+		driver.navigate().back();
 		}
+	}
+	
+	public void clickReadMoreAndCompareResult() throws InterruptedException {
+		int size = PositionList.size();
+		for (int i=1; i<size+1; i++) { 
+		String expect_PositionName = driver.findElement(By.xpath("//div[" + i + "]/div/div[1]/div/a/strong")).getText().toLowerCase();
+		String expect_PositionNo = driver.findElement(By.xpath("//div[" + i + "]/div/div[1]/p/span[2]")).getText();	
 		
-//		for (positionObj po:listOfPosition) {	
-//			expect_name = po.getPositionName();
-//			System.out.println(expect_name);
-//			expect_no = po.getPositionNo();
-//			System.out.println(expect_no);
-//			JavascriptExecutor js = (JavascriptExecutor)driver;
-//			waitHelper.WaitForElement(po.getWebElement2(), 3);
-//			js.executeScript("arguments[0].click()", po.getWebElement2());
-////			assertTrue(actual_positionName.getText().toUpperCase().equals(expect_name));
-//			System.out.println(actual_positionName.getText().toUpperCase());
-//			System.out.println(actual_positionNo.getText());
-////			assertTrue(actual_positionNo.getText().equals(expect_no));
-//			driver.navigate().back();
-//			continue;
-//			}
-		System.out.println(listOfPosition.size());
-		for (int i=0; i<listOfPosition.size(); i++){
-			expect_name = listOfPosition.get(2).getPositionName();
-			System.out.println(expect_name);
-			expect_no = listOfPosition.get(2).getPositionNo();
-			System.out.println(expect_no);
-			Actions act= new Actions(driver);
-		    act.moveToElement(listOfPosition.get(2).getWebElement2()).click().build().perform();
-			System.out.println(actual_positionName.getText().toUpperCase());
-			System.out.println(actual_positionNo.getText());
-//			driver.navigate().back();
-			break;
-        }
-			}
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		 js.executeScript("arguments[0].click();",driver.findElement(By.xpath("//*[@id='gatsby-focus-wrapper']/main/section[1]/div[" + i + "]/div/div[2]/a")));
+
+		Thread.sleep(1000);
+		String actual_PositionName = actual_positionName.getText().toLowerCase();
+		String actual_PositionNo = actual_positionNo.getText();
+		assertTrue(actual_PositionName.contains(expect_PositionName));
+		assertTrue(actual_PositionNo.contains(expect_PositionNo));
+		driver.navigate().back();	
+		}
+	}
 
 }

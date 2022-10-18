@@ -29,8 +29,6 @@ public class navigationBlog extends AbstractPage{
 	@FindBy(xpath="//*[@id='gatsby-focus-wrapper']/main/section/section[2]/article/article/div[2]/h2")
 	public WebElement nameOfPost;
 	
-	
-	
 	@FindBy(css = ".article-header__metadata__title")
 	public WebElement act_nameOfPost;
 	
@@ -88,21 +86,21 @@ public class navigationBlog extends AbstractPage{
 	}
 
 	public void ScrollDown() throws InterruptedException {
-		waitHelper.WaitForElement(this.allTab, 3);
+		waitHelper.WaitForElement(this.AITab, 3);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView(true);",allTab);
-		
+		js.executeScript("arguments[0].scrollIntoView(true);",AITab);
 	    Thread.sleep(1000);
 	}
 	
 	public void clickAITab() throws InterruptedException {
+		Thread.sleep(2000);
 		waitHelper.WaitForElement(this.AITab, 3);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView(true);",AITab);
 		js.executeScript("arguments[0].click();",AITab);
 	}
 	
 	public void clickDATab() throws InterruptedException {
+		Thread.sleep(2000);
 		waitHelper.WaitForElement(this.DATab, 3);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView(true);",DATab);
@@ -110,6 +108,7 @@ public class navigationBlog extends AbstractPage{
 	}
 	
 	public void clickDLTab() throws InterruptedException {
+		Thread.sleep(2000);
 		waitHelper.WaitForElement(this.DLTab, 3);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView(true);",DLTab);
@@ -117,6 +116,7 @@ public class navigationBlog extends AbstractPage{
 	}
 	
 	public void clickMLTab() throws InterruptedException {
+		Thread.sleep(2000);
 		waitHelper.WaitForElement(this.MLTab, 3);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].scrollIntoView(true);",MLTab);

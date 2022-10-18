@@ -100,6 +100,7 @@ public class subcribeStepDefinitions extends TestBase {
 	
 	@Then("^I see an error message as \"([^\"]*)\" displayed$")
 	public void i_see_an_error_message_as_displayed(String arg1) throws Throwable {
+		Thread.sleep(1000);
 		assertTrue(Subcribe.getMsg4().equals(arg1));
 	}
 	

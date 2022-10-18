@@ -160,5 +160,21 @@ public class navigationStepDefinitions extends TestBase {
 	   Navigation.clickOpenPositionsBtn();
 	}
 	
-
+	@Then("^Being Benefits page$")
+	public void being_Benefits_page() throws Throwable {
+	    Navigation.isBeingBenefitsPage();
+	}
+    
+	@When("^Click on Check out our packages button$")
+	public void click_on_Check_out_our_packages_button() throws Throwable {
+		Navigation.clickCheckOutPackagesBtn();
+	}
+	
+	@Then("^Being price package of DrParser page$")
+	public void being_price_package_of_DrParser_page() throws Throwable {
+		Navigation.isBeingPricingPage();
+	}
+	
+	
 }
+

@@ -29,7 +29,21 @@ public class positionStepDefinitions  extends TestBase  {
 
 	@Then("^I am navigated to page of respectively position$")
 	public void i_am_navigated_to_page_of_respectively_position() throws Throwable {
-	    position.compareCapacity();
+	    position.clickPositionAndCompareResult();
+	}
+	
+	@When("^Click on Read more button$")
+	public void Click_on_Read_more_button() throws Throwable {
+	    position.Scrolldown();
+	}
+	
+	
+	
+	
+	
+	@Then("^I am navigated to the page of respectively position$")
+	public void i_am_navigated_to_the_page_of_respectively_position() throws Throwable {
+	    position.clickReadMoreAndCompareResult();
 	}
 	
 }
